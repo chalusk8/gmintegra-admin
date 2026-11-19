@@ -2,6 +2,8 @@
 
 Panel admin (mock) para integraciones logísticas: clientes, servicios ERP, usuarios de empresa y credenciales de portal.
 
+**Demo en vivo:** https://chalusk8.github.io/gmintegra-admin/
+
 Stack: React 19 · Vite · Tailwind CSS · React Router · Framer Motion · Lucide.
 
 ## Demo local
@@ -15,10 +17,10 @@ Abre http://localhost:5173/
 
 ## Login demo
 
-| Usuario    | Contraseña  |
-|------------|-------------|
-| `admin`    | `Admin2026!` |
-| `ops.admin`| `Ops2026!`   |
+| Usuario     | Contraseña   |
+|-------------|--------------|
+| `admin`     | `Admin2026!` |
+| `ops.admin` | `Ops2026!`   |
 
 Datos 100% mock (sin API real).
 
@@ -31,5 +33,5 @@ npm run preview
 
 ## Publicación
 
-- **GitHub Pages:** el workflow `.github/workflows/deploy-pages.yml` despliega en cada push a `main`/`master`.
-- **Vercel:** importa el repo; `vercel.json` ya reescribe rutas SPA a `index.html`.
+- **GitHub Pages:** rama `gh-pages` (build estático con `VITE_BASE=/gmintegra-admin/`).
+- **Vercel:** importa el repo; `vercel.json` reescribe rutas SPA a `index.html`.
