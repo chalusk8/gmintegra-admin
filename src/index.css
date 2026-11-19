@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --color-brand-50: oklch(97% 0.02 55);
+  --color-brand-100: oklch(92% 0.06 55);
+  --color-brand-500: oklch(72% 0.19 55);
+  --color-brand-600: oklch(64% 0.2 55);
+  --color-brand-700: oklch(55% 0.19 55);
+}
+
+@keyframes app-breathe {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.72;
+    transform: scale(1.05);
+  }
+}
+
+@keyframes login-shimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  @apply bg-white text-neutral-900 antialiased;
+}
+
+::selection {
+  background-color: color-mix(in oklab, #ff8c00 28%, transparent);
+  color: inherit;
+}
+
+.app-shell-glow {
+  animation: app-breathe 14s ease-in-out infinite;
+}
+
+.login-aurora {
+  background: linear-gradient(
+    125deg,
+    #ff8c00 0%,
+    #ea580c 28%,
+    #f97316 55%,
+    #fb923c 78%,
+    #ff8c00 100%
+  );
+  background-size: 240% 240%;
+  animation: login-shimmer 18s ease infinite;
+}
